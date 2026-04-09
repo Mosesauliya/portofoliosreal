@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <div class="loader" id="loader">
+    <div class="loader-bar"></div>
+</div>
+
+<!--Cursor-->
+<div class="cursor"></div>
+<div class="cursor-followers"></div>
+
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">Moses</h1>
+
+            <nav>
+                <a data-aos="fade-down" data-aos-duration="1500" href="#">About</a>
+                <a data-aos="fade-down" data-aos-duration="2000" href="#">Project</a>
+                <a data-aos="fade-down" data-aos-duration="2500" href="#">Social Media</a>
+            </nav>
+
+            <button data-aos="fade-down" data-aos-duration="1500" class="btn-sign">SIGN IN</button>
+        </header>
+
+        <main>
+        <div class="content">
+            <div class="tag-box">
+                <div class="tag"></div>
+            </div>
+
+            <h1 data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="300"
+                data-aos-offset="0"
+                data-aos-duration="2000">
+                Welcome to<br>my journey</h1>
+
+            <p data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="300"
+                data-aos-offset="0"
+                data-aos-duration="2500" class="description">
+                all things i have <br>done in the digital world
+            </p>
+
+            <div data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="300"
+                data-aos-offset="0"
+                data-aos-duration="3000" 
+                class="buttons">
+                <a href="#" class="btn-get-started">My Project &gt;</a>
+
+        </div>
+
+    </main>
+     <spline-viewer 
+    loading="lazy" 
+    class="spider" 
+    url="https://prod.spline.design/yJj7AryU0WJoG3M9/scene.splinecode"></spline-viewer>
+
+    </div>
+    
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    function hideLoader() {
+        setTimeout(() => {
+            document.getElementById('loader').classList.add('hidden');
+            document.querySelector('.tag-box').classList.add('animate');
+            AOS.init();
+        }, 300);
+    }
+
+    const spline = document.querySelector('spline-viewer');
+    spline.addEventListener('load', hideLoader);
+
+    setTimeout(hideLoader, 5000);
+
+    spline.addEventListener('load', () => {
+        setTimeout(() => {
+            spline.classList.add('visible');
+        }, 3000);
+    });
+
+    setTimeout(() => {
+        spline.classList.add('visible');
+    }, 4000);
+    
+</script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.74/build/spline-viewer.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
